@@ -20,7 +20,7 @@ class Scraper
         scraped_students << scraped_student
 
     end
-      scraped_students
+      puts scraped_students
   end
 
   def self.scrape_profile_page(profile_url)
@@ -48,7 +48,7 @@ class Scraper
     student[:profile_quote] = scraped_profile_array.css(".profile-quote").text
     student[:bio] = scraped_profile_array.css("div.description-holder p").text
 
-    student
+    puts student
   end
 
 end
